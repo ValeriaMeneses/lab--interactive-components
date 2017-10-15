@@ -4,6 +4,7 @@
 
 body{
   font-family: sans-serif;
+
 }
 *{ box-sizing: border-box }
 
@@ -15,4 +16,67 @@ img {
 #app-container{
   max-width: 800px;
   margin: 0 auto;
+  // border: 2px solid red ;
+}
+
+.contenido-menu{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    .rojo{
+      background-color: #c0392b;
+    }
+  li{
+    list-style: none;
+    background-color: #3498db;
+    color: white;
+    width: 25%;
+    margin:auto 1px;
+    height: 120px;
+    font-weight: bold;
+    padding: 50px 0;
+    font-size: 22px;
+
+  }
+}
+
+.membership{
+  margin: auto 1px;
+  border: 2px solid black;
+  padding: 15px;
+  line-height: 30px;
+  font-size: x-large;
+
+}
+
+.programs{
+  margin: auto 1px;
+  border: 2px solid black;
+  padding: 15px;
+  line-height: 30px;
+  font-size: x-large;
+  display: none;
+  ul{
+    padding-left: 70px;
+  }
+}
+
+.screenings{
+  margin: auto 1px;
+  border: 2px solid black;
+  padding: 15px;
+  line-height: 35px;
+  font-size: x-large;
+  display: none;
+}
+
+.press{
+  border: 2px solid black;
+  margin: auto 1px;
+  padding: 15px;
+  line-height: 35px;
+  font-size: x-large;
+  display: none;
 }
