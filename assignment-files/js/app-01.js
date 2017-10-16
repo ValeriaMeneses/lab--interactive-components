@@ -9,19 +9,12 @@ var mostrarSeccion = function () {
   var clase = boton.className
   // boton.className += " rojo"
 
-
   // boton.className.replace(" rojo", "");
-
-
-
   if (clase === 'progr') {
     programs.style.display = 'block'
     membership.style.display = 'none'
     screenings.style.display = 'none'
     press.style.display = 'none'
-
-
-
 
   }else if (clase === 'scree') {
     screenings.style.display = 'block'
@@ -29,13 +22,11 @@ var mostrarSeccion = function () {
     membership.style.display = 'none'
     press.style.display = 'none'
 
-
   }else if (clase === 'pres') {
     screenings.style.display = 'none'
     programs.style.display = 'none'
     membership.style.display = 'none'
     press.style.display = 'block'
-
 
   }else if (clase === 'mem') {
     screenings.style.display = 'none'
@@ -45,10 +36,22 @@ var mostrarSeccion = function () {
 
   }
 
-
 }
 for (var i = 0; i < menu.length; i++) {
   var menuLi = menu[i]
-
+  // menu[i].classList.remove('rojo');
   menuLi.addEventListener('click',mostrarSeccion)
 }
+
+
+var changeBackground = function() {
+		for (var i = 0; i < menu.length; i++) {
+				menu[i].addEventListener('click', function() {
+						for (var i = 0; i < menu.length; i++) {
+								menu[i].classList.remove('rojo');
+						};
+						this.className += ' rojo';
+				});
+		}
+}
+changeBackground();
