@@ -38,7 +38,8 @@ document.querySelector(".btn").addEventListener('click',mostrarSeccion = functio
     var validationTaxId = formulario.querySelector('.validation--tax-id')
     if (taxId === '') {
       validationTaxId.textContent = 'Must provide Tax ID Number'
-    }else if (taxId.length === 10) {
+    }else if (taxId.length === 10  &&   /^([0-9]{10})$/i.test(taxId)) {
+      // /^([0-9]{10})$/i.test(taxId) ---Hace un text para comprobar que son numeros de 0-9 y {10} el el numero de digitos
       validationTaxId.textContent = 'Success'
     }else{
       validationTaxId.textContent = 'Tax ID number is only numbers and is 10 digits'
@@ -52,14 +53,12 @@ document.querySelector(".btn").addEventListener('click',mostrarSeccion = functio
     }
 
     var validationTermsOfService = formulario.querySelector('.validation--terms-of-service')
-    console.log(terminos.checked);
+    // console.log(terminos.checked);
     if (terminos.checked === false) {
       validationTermsOfService.textContent = "Must approve terms of service"
 
     }else {
       validationTermsOfService.textContent = "Success"
     }
-
-
 
 })
